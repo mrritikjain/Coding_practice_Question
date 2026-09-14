@@ -1,7 +1,25 @@
-<script>
-  //Sum of array elements
-  function sumArray(arr) {
-    return arr.reduce((sum, acc) => sum + acc, 0);
-  }
-  console.log(sumArray([1, 2, 3, 4, 5]));
-</script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Practice</title>
+  </head>
+  <body>
+    <button id="toggleBtn">Click Me</button>
+    <script>
+      //Sum of array elements
+      function sumArray(arr) {
+        return arr.reduce((sum, acc) => sum + acc, 0);
+      }
+      console.log(sumArray([1, 2, 3, 4, 5]));
+
+      // button that, when clicked, changes its own text from "Click me" to "Clicked!" and back on the next click.
+      const toggleBtn = document.getElementById("toggleBtn");
+      toggleBtn.addEventListener("click", () => {
+        toggleBtn.innerText =
+          toggleBtn.innerText === "Click Me" ? "Clicked !" : "Click Me";
+      });
+    </script>
+  </body>
+</html>
