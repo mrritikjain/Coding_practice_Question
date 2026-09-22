@@ -8,18 +8,27 @@
   <body>
     <button id="toggleBtn">Click Me</button>
     <script>
-      //Sum of array elements
+      // 1. Sum of array elements
       function sumArray(arr) {
         return arr.reduce((sum, acc) => sum + acc, 0);
       }
-      console.log(sumArray([1, 2, 3, 4, 5]));
+      console.log(sumArray([1, 2, 3, 4, 5])); // 15
 
-      // button that, when clicked, changes its own text from "Click me" to "Clicked!" and back on the next click.
+      // 2. Toggle button text on each click
       const toggleBtn = document.getElementById("toggleBtn");
       toggleBtn.addEventListener("click", () => {
         toggleBtn.innerText =
           toggleBtn.innerText === "Click Me" ? "Clicked !" : "Click Me";
       });
+      // 3. Remove Duplicate from Array (defined ONCE, outside the click handler)
+      function removeDuplicate(arr) {
+        return [...new Set(arr)];
+      }
+      console.log(removeDuplicate([1, 1, 3, 5, 2, 3])); // [1, 3, 5, 2]
+
+      //Count Words of String
+
+      
     </script>
   </body>
 </html>

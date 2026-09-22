@@ -4,7 +4,7 @@ import Greetings from "./Components/Greetings";
 const App = (name) => {
   return (
     <div>
-      <Greetings  />
+      <Greetings name = "Ritik" />
     </div>
   );
 };
