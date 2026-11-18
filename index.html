@@ -58,6 +58,26 @@
       }
 
       fatchUser(1).then(console.log);
+      //Given a string, find the first character that appears only once.
+      function findFirstUniqueChar(str) {
+        const charCount = new Map();
+
+        // You can loop directly over 'str' without .split("")
+        for (const char of str) {
+          charCount.set(char, (charCount.get(char) || 0) + 1);
+        }
+
+        for (const [key, value] of charCount) {
+          if (value === 1) {
+            return key; // Exits the function and returns "c"
+          }
+        }
+
+        return null; // Fallback if all characters repeat
+      }
+
+      let str = "aabbcde";
+      console.log(findFirstUniqueChar(str)); // Output: "c"
     </script>
   </body>
 </html>
